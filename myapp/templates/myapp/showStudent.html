@@ -1,0 +1,51 @@
+{% extends 'myapp/base.html' %}
+{% block title %}View Student{% endblock title %}
+
+{% block main_content %}
+<div class="container mt-4 ">
+    <h2 class="text-center alert alert-success">STUDENT MANAGEMENT SYSTEM</h2>
+
+    <div class="row ">
+        <div class="col-sm-12 mx-auto">
+            <h4 class="text-center alert alert-primary">STUDENT'S LIST</h4>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">SL No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Course</th>
+                        <th scope="col">Roll No</th>
+                        <th scope="col">Date of Birth</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Email ID</th>
+                        <th scope="col">Mobile No</th>
+                        <th scope="col">Parent's Mobile No</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for stud in student %}
+                    <tr>
+                        <th scope="row">{{stud.id}}</th>
+                        <td>{{stud.name}}</td>
+                        <td>{{stud.course}}</td>
+                        <td>{{stud.rollno}}</td>
+                        <td>{{stud.dob}}</td>
+                        <td>{{stud.gender}}</td>
+                        <td>{{stud.email}}</td>
+                        <td>{{stud.mobile}}</td>
+                        <td>{{stud.guardian_mobile}}</td>
+                        <td>
+                            <form action="{% url 'delete' stud.id %}" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" class="btn btn-danger" value="Delete">
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div><br><br>
+
+    {% endblock main_content %}

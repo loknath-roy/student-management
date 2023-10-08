@@ -1,0 +1,148 @@
+{% extends 'myapp/base.html' %}
+{% block title %}Student Management System{% endblock title %}
+{% load static %}
+
+{% block banner-slider %}
+
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images\2.jpg' %}" class="d-block" width="1400" height="550" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>The Future Of The World Is In My Class Today</h5>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images\9.jpg' %}" class="d-block" width="1400" height="550" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Education Is The Movement From Darkness to Light</h5>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images\12.jpg'  %}" class="d-block" width="1400" height="550" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Education Is The Vaccine for Violence.</h5>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images\6.jpg'  %}" class="d-block" width="1400" height="550" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Education: One thing that can't be taken from you...</h5>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images\4.jpg'  %}" class="d-block" width="1400" height="550" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Intelligence plus Character that is the goal of true Education <h5>
+
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div><br><br>
+{% endblock banner-slider %}
+
+
+{% block main_content %}
+<div class="row container mx-auto text-center ">
+  <h1>Student Management System</h1>
+  <hr><br>
+  <div>
+    <h4>"Let us remember : One Book,One Pen,One Child and One Teacher can Change The WORLD..."</h4><br><br>
+  </div>
+
+  <div class="row container mb-5">
+    <div class="col-mb-5 col-sm-4 bg-dark ">
+      <img src="{% static 'images\10.png' %}" class="img-responsive " width="350" height="350" alt="">
+    </div><br><br>
+
+    <div class="col-mb-5 col-sm-7 offset-1 ">
+      <h3>What is Student Management System ?</h3>
+      <hr><br>
+      <p>A Student Management System is designed to record,analyze,and manage information in a school. These systems are
+        updated by teachers and school administrators on a rolling basis to batter serve the need of the greater student
+        body.<br><br>
+        Without a Student Management System,schools would become disorganized,staff would lack clarity into scheduling
+        and student activity, and it would become increasingly difficult for school districts to leverage data in the
+        dicision-making process. </p>
+    </div>
+  </div>
+  <div class="row container mt-4">
+    <div class="col-mb-5 col-sm-7 ">
+      <h3>Purpose of Student Management System</h3>
+      <hr><br>
+      <p>The school/college management has to handle records fo many number of students and maintenance was
+        difficult.Though it has used an information system,it was totally manual.Hence there is a need to upgrade the
+        system with a computer based information system. <br><br>
+
+        The Student Management System allows authorized users to access the record of academically registered
+        students.It can be used in various educational institutes across the globe and simplifies working of
+        institutes.<br><br>
+
+        This system helps in maintaining the database of the students in any educational organization.We can easily
+        access any students information anytime and can be kept safely for long period of time without any damage.
+      <p>
+    </div>
+    <div class="col-mb-5 col-sm-4 offset-1">
+      <img src="{% static 'images\11.png' %}" class="img-responsive " width="380" height="350" alt="">
+    </div><br><br>
+  </div>
+
+
+  <div class="row container mt-5">
+    <div class="col-mb-5 col-sm-4 ">
+      <img src="{% static 'images\5.png' %}" class="img-responsive " width="400" height="350" alt="">
+    </div><br><br>
+
+    <div class="col-mb-5 col-sm-7 offset-1 ">
+      <h3>Features of a Student Management System</h3>
+      <hr><br>
+      <ul class="entry-content" style="list-style-type: square;">
+        <li>CREATION OF NEW RECORD : This function creates a record for a new student. </li><br>
+        <li>DISPLAY OF DATA IN RECORD : This function displays the record of the students.</li><br>
+        <li>UPDATION IN RECORD : This function updates the information in a record of any student.</li><br>
+        <li>DELETION OF RECORD : This function is used to delete the existing record of any student.</li><br>
+      </ul>
+    </div>
+  </div>
+  <div class="row container mt-5">
+    <div class="col-mb-5 col-sm-7 ">
+      <h3>Advantage</h3>
+      <hr><br>
+      <ul class="entry-content" style="list-style-type: circle;">
+        <li>User friendly interface. </li><br>
+        <li>Fast access to database.</li><br>
+        <li>Less error.</li>.<br>
+        <li>Look and feel environment.</li><br>
+        <li>Search facility.</li><br>
+      </ul>
+
+    </div>
+    <div class="col-mb-5 col-sm-4 offset-1">
+      <img src="{% static 'images\3.jpg' %}" class="img-responsive " width="400" height="350" alt="">
+    </div><br><br>
+  </div>
+
+</div><br><br>
+
+
+{% endblock main_content%}
