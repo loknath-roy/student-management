@@ -6,12 +6,7 @@ from .models import Student
 Gender = [('Male','Male'),('Female','Female')]
 class  NewStudent(forms.ModelForm):
     gender = forms.ChoiceField(choices=Gender)
-    # dob = forms.DateField(
-    #     widget = forms.DateInput(format='%d/%m/%Y',                                
-    #                             attrs={'class':'form-control'}),
-    #                             input_formats=settings.DATE_INPUT_FORMATS)
-                                
-                            
+                
     class Meta:
         model = Student
         fields = ['name','course','rollno','dob','gender','email','mobile','guardian_mobile']
